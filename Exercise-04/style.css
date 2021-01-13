@@ -1,0 +1,44 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    width: 100vw;
+}
+
+.hero {
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.hero-text, .hero-image {
+    width: 50%;
+    height: 100%;
+
+}
+
+.hero-text {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    background: url(img/cover.jpg)
+    no-repeat center center;
+    background-size: cover;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-text, .hero-image {
+        width: 100%;
+    }
+} 
+
