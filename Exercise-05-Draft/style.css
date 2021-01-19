@@ -1,0 +1,60 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  @import url('https://fonts.googleapis.com/css?family=PT+Serif&display=swap');
+
+  body {
+    margin: 5rem 0;
+    min-height: 200vh;
+    font-family: 'PT Serif', serif;
+  }
+  p {
+    max-width: 500px;
+    margin: 0 auto 1rem;
+  }
+  text {
+    fill: red;
+    font-size: 30px;
+  }
+
+  .flexbox-container{
+    display: flex;
+    align-items:center;
+    flex-direction:column;
+  }
+
+  .flexbox-item-1{
+    min-height: 300px;
+    min-width: 300px;
+
+  }
+
+  .flexbox-item-2{
+    min-height: 300px;
+    min-width: 300px;
+  }
+
+  .scaling-svg {
+    position: absolute; 
+    height: 100%; 
+    width: 100%; 
+    left: 0; 
+    top:0;
+  }
+
+  path {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #curve{
+    display: block;
+    margin: 0 auto;
+  }
+
+  .grad{
+    background-image: linear-gradient(black,white)
+  }
+
+

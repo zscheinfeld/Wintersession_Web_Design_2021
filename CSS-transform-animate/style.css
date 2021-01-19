@@ -1,0 +1,43 @@
+body {
+    width: 100vw;
+    background-color: black;
+    color: blue;
+    font-size: 48px;
+}
+
+div {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+
+    transition-property:color;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.5s;
+
+    transition-property:transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0;
+}
+
+div:hover{
+    color:deeppink;
+    transform: scale(.2,.2) rotate(-20deg);
+}
+
+
+
+p {
+    
+}
+
+h1 {
+    text-align:center;
+    width:60%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0 auto;
+}
+
+
