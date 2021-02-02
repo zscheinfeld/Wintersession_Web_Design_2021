@@ -8,6 +8,7 @@
     display:flex;
     justify-content:space-around;
     flex-direction:column;
+    scroll-padding-top: 100px;
 }
 
 .flexbox-item {
@@ -17,10 +18,34 @@
     
 }
 
+.flexbox-item-studio{
+    height: 100vh;
+    min-height:200px;
+    background-color:rgb(48, 48, 48);  
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-left: 7px;
+    padding-right: 7px;
+    display: flex;
+    justify-content: flex-end;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}   
+
+.flexbox-item-transparent{
+    height: 100vh;
+    min-height:200px;
+    position: relative;
+    z-index: 1;
+}  
+
 .flexbox-item-2{
     height: 100vh;
     min-height:200px;
-    background-color: black ;  
+    background-color: black ; 
+    z-index: 1;
+
+    
 }   
 
 .flexbox-item-client-container{
@@ -31,22 +56,28 @@
     justify-content: flex-start;
     overflow-x: scroll;
     overflow-y: hidden;
+    padding-left: 921px;
+    position: sticky;
+    bottom: 0px;
+    z-index: 0;
+
 }   
 
 .client-column-container{
     height:100%;
-    min-width:605px;
-    background-color:red;
-    display: flex;
+    min-width:682px;
+    background-color:rgb(48, 48, 48);
     flex-direction: column;
+    padding:5px;
+    
     
 }
 
-.client-hero{
-    height:50%;
-    width:95%;
-    margin: 2%;
-    background-color: greenyellow;  
+.client-hero-container{
+    height:447.5px;
+    width:671px;
+    background-color: greenyellow;
+    margin: 7px  ;
 }
 
 
@@ -59,5 +90,35 @@
     overflow-x: scroll;
     overflow-y: hidden;
 }   
+
+.client-hero-images{
+    height:inherit;
+    width: inherit;  
+    object-fit: cover;
+}
+
+.client-hero-images img{
+    width: inherit;
+    height: inherit;
+    object-fit: cover;
+}
+
+.square-column{
+    min-height:70%;
+    min-width: 360px;
+    background-color: lightcoral;
+    margin:5px;
+    display: flex;
+
+}
+
+  
+
+
+
+
+
+
+
 
 
