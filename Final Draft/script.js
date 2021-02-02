@@ -37,9 +37,33 @@ $("document").ready(function() {
 //     };
 
 
+
 $(document).ready(function(){
+    // window.scroll(0,scrollable)
+    $(".flexbox-item-client-container").hide();
+    $(".flexbox-item-studio").show();
+    var scroll =this.scrollY;
+    const scrollable=document.documentElement.scrollHeight - window.innerHeight
+    window.scrollTo(0,.5*scrollable)
+    // slideshow
     $('.client-hero-images').on('click', function(){
         console.log('clicked')
+        var currentImg= $('.current')
+        var firstImg = $("#firstimage")
+        var nextImg = currentImg.next();
+
+        if(nextImg.length){
+            currentImg.addClass('notcurrent')
+            currentImg.removeClass('current')
+            nextImg.addClass('current')
+        }
+
+        else{
+            currentImg.addClass('notcurrent')
+            currentImg.removeClass('current')
+            firstImg.addClass('current')
+
+        }
     });
 });
 
@@ -51,11 +75,23 @@ $(document).ready(function(){
 // };
 
 
+
 window.addEventListener("scroll", function(event){
     var scroll =this.scrollY;
     console.log(scroll)
     const scrollable=document.documentElement.scrollHeight - window.innerHeight
     // const scrolled = window.scrollY;
     console.log(scrollable);
+    if(scroll < (.5*scrollable)){
+        console.log('client container should be hidden')
+        $(".flexbox-item-client-container").hide();
+        $(".flexbox-item-studio").show();
+    }
+    else {
+        console.log('client container should be ')
+        $(".flexbox-item-client-container").show();
+        $(".flexbox-item-studio").hide();
+    }
 });
+
 
