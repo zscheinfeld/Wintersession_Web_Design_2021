@@ -45,7 +45,7 @@ $(document).ready(function(){
     var scroll =this.scrollY;
     const scrollable=document.documentElement.scrollHeight - window.innerHeight
     window.scrollTo(0,.5*scrollable)
-    // slideshow
+    // critical 39 slideshow
     $('.client-hero-images').on('click', function(){
         console.log('clicked')
         var currentImg= $('.current')
@@ -53,15 +53,32 @@ $(document).ready(function(){
         var nextImg = currentImg.next();
 
         if(nextImg.length){
-            currentImg.addClass('notcurrent')
-            currentImg.removeClass('current')
+
+            setTimeout(function(){currentImg.addClass('notcurrent')},1000)
+            setTimeout(function(){currentImg.removeClass('current')},1000)
             nextImg.addClass('current')
+            nextImg.removeClass('notcurrent')
+            currentImg.addClass('slideback')
+            currentImg.removeClass('slidenext')
+            nextImg.addClass('slidenext')
+            nextImg.removeClass('slideback')
+
         }
 
         else{
-            currentImg.addClass('notcurrent')
-            currentImg.removeClass('current')
+            setTimeout(function(){currentImg.addClass('notcurrent')},1000)
+            setTimeout(function(){currentImg.removeClass('current')},1000)
+            currentImg.addClass('slideback')
+            currentImg.removeClass('slidenext')
+            firstImg.removeClass('notcurrent')
             firstImg.addClass('current')
+            firstImg.addClass('slidenext')
+            firstImg.removeClass('slideback')
+            
+            
+            // firstImg.animate({width:'toggle'})
+            
+
 
         }
     });

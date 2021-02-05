@@ -81,12 +81,14 @@
     height:inherit;
     width: inherit;  
     object-fit: cover;
+    overflow-x: hidden;
 }
 
 .client-hero-images img{
     width: inherit;
     height: inherit;
     object-fit: cover;
+    overflow-x: hidden;
 }
 
 
@@ -126,13 +128,53 @@
 
 /* Image Slideshow */
 
+ @keyframes slidenext{
+    0% {
+    transform:translateX(671px)
+    }
+
+    100% {
+        transform:translateX(0px)
+        }
+    
+}
+
+@keyframes slideback{
+    0% {
+    transform:translateX(0px)
+    }
+
+    100% {
+        transform:translateX(-671px)
+        }
+    
+} 
+
 .notcurrent{
-    display:none
+    display:none;
+    position:absolute;
+
+}
+
+.slideback{
+    animation-name:slideback; 
+    animation-duration: 1s;
 }
 
 .current{
-    display:inherit
+    overflow-x: hidden;
+    position:absolute;
+    display:inherit;
 }
+
+.slidenext{
+    animation-name: slidenext;
+    animation-duration: 1s;
+}
+
+
+
+
 
 
   
