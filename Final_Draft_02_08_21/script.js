@@ -10,33 +10,6 @@ $("document").ready(function() {
     
     });
 
-//variables// 
-
-// var $inner = $(".flexbox-item-client-container");
-// var $grid = $(".flexbox-item-client-container");
-// var wh = window.innerHeight;
-// var ww = window.innerWidth;
-// var inner_sw = $inner.scrollWidth;
-// var topMax = $inner.scrollWidth - ww;
-// var scrollwidth;
-
-
-// console.log(inner_sw)
-// console.log(topMax)
-// console.log(wh)
-// console.log(ww)
-
-
-// var onscroll = (e) => {
-//     var top = $grid[0].getBoundingClientRect().top;
-//     var __top = top - window.innerHeight;
-//     var contactTop = $("#flexbox-item-about")[0].getBoundingClientRect().top;
-//     $inner[0].scrollLeft = -__top;
-//     console.log(top);
-//     };
-
-
-
 $(document).ready(function(){
     // window.scroll(0,scrollable)
     $(".flexbox-item-client-container").hide();
@@ -44,55 +17,8 @@ $(document).ready(function(){
     var scroll =this.scrollY;
     const scrollable=document.documentElement.scrollHeight - window.innerHeight
     window.scrollTo(scrollable-window.innerHeight)
-    // var studiosectionwidth = $(".flexbox-item-studio").width() + 921 + 7;
-    // $(".flexbox-item-studio").css("left" , (-studiosectionwidth));
-
-    // critical 39 slideshow
-    // $('.client-hero-images').on('click', function(){
-    //     console.log('clicked')
-    //     var currentImg= $('.current')
-    //     var firstImg = $("#firstimage")
-    //     var nextImg = currentImg.next();
-
-    //     if(nextImg.length){
-
-    //         setTimeout(function(){currentImg.addClass('notcurrent')},1000)
-    //         setTimeout(function(){currentImg.removeClass('current')},1000)
-    //         nextImg.addClass('current')
-    //         nextImg.removeClass('notcurrent')
-    //         currentImg.addClass('slideback')
-    //         currentImg.removeClass('slidenext')
-    //         nextImg.addClass('slidenext')
-    //         nextImg.removeClass('slideback')
-
-    //     }
-
-    //     else{
-    //         setTimeout(function(){currentImg.addClass('notcurrent')},1000)
-    //         setTimeout(function(){currentImg.removeClass('current')},1000)
-    //         currentImg.addClass('slideback')
-    //         currentImg.removeClass('slidenext')
-    //         firstImg.removeClass('notcurrent')
-    //         firstImg.addClass('current')
-    //         firstImg.addClass('slidenext')
-    //         firstImg.removeClass('slideback')
-            
-            
-    //         // firstImg.animate({width:'toggle'})
-            
-
-
-    //     }
-    // });
+  
 });
-
-
-//load
-// window.onload = function()
-// {
-//     document.getElementById("home").scrollIntoView();
-// };
-
 
 
 window.addEventListener("scroll", function(event){
@@ -158,9 +84,6 @@ carouselSlide.addEventListener('transitionend', ()=>{
             carouselSlide.style.transform = 'translateX(' +(-size * countercritical) + 'px)';}
 
 });
-
-
-
 
 // Groji slideshow
 
