@@ -19,7 +19,7 @@ $(document).ready(function(){
     // $(".flexbox-item-studio").show();
     // var scroll =this.scrollY;
     // var scrollable=document.documentElement.scrollHeight - window.innerHeight
-    window.scroll(0, studiosectionwidth)
+    window.scrollTo(0, studiosectionwidth)
     
   
 });
@@ -27,6 +27,8 @@ $(document).ready(function(){
 
 window.addEventListener("scroll", function(event){
     var studiosectionwidth = $(".flexbox-item-studio").width() + 921 + 7;
+    var clientsectionwidth = $(".flexbox-item-client-container").width() + 921;
+    $(".flexbox-item-transparent-client").height(clientsectionwidth);
     $(".flexbox-item-transparent").height(studiosectionwidth);
     var scroll =this.scrollY;
     console.log(scroll)
@@ -51,6 +53,8 @@ window.addEventListener("scroll", function(event){
         $(".flexbox-item-client-container").show();
         $(".flexbox-item-studio").css("visibilty" , "hidden");
         $(".flexbox-item-studio").css("left" , (studiosectionwidth));
+        $(".flexbox-item-client-container").css("left" , (- (1*(window.scrollY-(studiosectionwidth + (window.innerHeight/2)))) + "px"));
+        
     }
     
 });
