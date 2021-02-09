@@ -1,3 +1,7 @@
+const landing = document.getElementById('landing')
+
+
+
 $("document").ready(function() {
 
     const mq = window.matchMedia('(max-width: 768px)');
@@ -15,17 +19,17 @@ $(document).ready(function(){
     $(".flexbox-item-client-container").hide();
     $(".flexbox-item-studio").show();
     var scroll =this.scrollY;
-    const scrollable=document.documentElement.scrollHeight - window.innerHeight
+    var scrollable=document.documentElement.scrollHeight - window.innerHeight
     window.scrollTo(scrollable-window.innerHeight)
   
 });
 
 
 window.addEventListener("scroll", function(event){
-    const studiosectionwidth = $(".flexbox-item-studio").width() + 921 + 7;
+    var studiosectionwidth = $(".flexbox-item-studio").width() + 921 + 7;
     var scroll =this.scrollY;
     console.log(scroll)
-    const scrollable=document.documentElement.scrollHeight - window.innerHeight
+    var scrollable=document.documentElement.scrollHeight - window.innerHeight
     // const scrolled = window.scrollY;
     console.log(studiosectionwidth + "studio section width")
     console.log(scroll + "scroll");

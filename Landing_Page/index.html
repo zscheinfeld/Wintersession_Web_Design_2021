@@ -9,6 +9,11 @@
         <title>landingpage</title>
         <link href="/favicon.ico" type="image/x-icon" rel="icon" />
     <body>  
+        <p class = "text"> studio</p>
+        <p class = "text"> client</p>
+        <p class = "text"> ^</p>
+        <p class = "text"> v</p>
+
         <script src="./three.min.js"></script>
         <script src="GLTFLoader.js"></script>
         <script>
@@ -16,7 +21,7 @@
 
             function init() {
                 scene = new THREE.Scene();
-                scene.background = new THREE.Color(0xdddddd);
+                scene.background = new THREE.Color(0xFFFFFF);
 
                 camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
                 camera.position.x=-200;
@@ -52,14 +57,17 @@
 
             }
                 
-            }
-
+        }
 
             init();
+
+            window.addEventListener("wheel", function(e) {
+            console.log("scrolled")
+            // code to increment object.position.z 
+            }, true);
         </script>
        
         <!-- <div class="scene"></div> -->
         <!-- <script src="./script.js"></script> -->
-        
     </body>
 </html>
