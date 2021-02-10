@@ -79,28 +79,28 @@ $("document").ready(function() {
 
     });
 
-     // covid slideshow
+    //  // covid slideshow
 
-     const carouselSlidecovid = document.querySelector("#covid");
-     const carouselImagescovid = document.querySelectorAll("#covid img");
-     var covidcounter = 1;
+    //  const carouselSlidecovid = document.querySelector("#covid");
+    //  const carouselImagescovid = document.querySelectorAll("#covid img");
+    //  var covidcounter = 1;
  
-     carouselSlidecovid.style.transform = 'translateX(' +(-size * covidcounter) + 'px)';
+    //  carouselSlidecovid.style.transform = 'translateX(' +(-size * covidcounter) + 'px)';
  
-     $("#covid").on('click', function(){
-         if (covidcounter >= carouselImagescovid.length-1) return;
-             carouselSlidecovid.style.transition = "transform 1s ease-in-out";
-             covidcounter++;
-             carouselSlidecovid.style.transform= 'translateX(' +(-size * covidcounter) + 'px)';
-     });
+    //  $("#covid").on('click', function(){
+    //      if (covidcounter >= carouselImagescovid.length-1) return;
+    //          carouselSlidecovid.style.transition = "transform 1s ease-in-out";
+    //          covidcounter++;
+    //          carouselSlidecovid.style.transform= 'translateX(' +(-size * covidcounter) + 'px)';
+    //  });
  
-     carouselSlidecovid.addEventListener('transitionend', ()=>{
-         if (carouselImagescovid[covidcounter].id === 'firstClonecovid') {
-             carouselSlidecovid.style.transition = "none";
-             covidcounter = carouselImagescovid.length - covidcounter;
-             carouselSlidecovid.style.transform = 'translateX(' +(-size * covidcounter) + 'px)';}
+    //  carouselSlidecovid.addEventListener('transitionend', ()=>{
+    //      if (carouselImagescovid[covidcounter].id === 'firstClonecovid') {
+    //          carouselSlidecovid.style.transition = "none";
+    //          covidcounter = carouselImagescovid.length - covidcounter;
+    //          carouselSlidecovid.style.transform = 'translateX(' +(-size * covidcounter) + 'px)';}
  
-     });
+    //  });
 
     // resize
 

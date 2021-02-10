@@ -391,7 +391,6 @@ canvas{
 .studio-square{
     width: calc(44vh);
     height: calc(44vh);
-    background-color: greenyellow;
     object-fit: cover;
 }
 
@@ -453,7 +452,6 @@ canvas{
 
 .client-hero-container{
     height:45vh;
-    background-color: greenyellow;
     margin-top: 10px  ;
     margin-bottom: 10px  ;
     overflow: hidden;
