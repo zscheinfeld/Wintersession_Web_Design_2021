@@ -190,7 +190,7 @@ canvas{
 
 .studio-double-column-container{
     height: vh;
-    min-width: 88vh;
+    max-width: 88vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
