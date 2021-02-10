@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="./styles.css">
+        <title>landingpage</title>
+        <link href="/favicon.ico" type="image/x-icon" rel="icon" />
+    <body>  
+        <p class = "text"> studio</p>
+        <p class = "text"> client</p>
+        <p class = "text"> ^</p>
+        <p class = "text"> v</p>
+
+        <script src="./three.min.js"></script>
+        <script src="GLTFLoader.js"></script>
+        <script>
+            let scene, camera, renderer;
+
+            function init() {
+                scene = new THREE.Scene();
+                scene.background = new THREE.Color(0xFFFFFF);
+
+                camera = new THREE.PerspectiveCamera(40,window.innerWidth/window.innerHeight,1,5000);
+                camera.position.x=-200;
+                camera.position.y=0;
+                camera.position.z=2000;
+                
+                hlight = new THREE.AmbientLight (0x404040,8);
+                scene.add(hlight);
+
+                const light = new THREE.DirectionalLight(0xffffff,3);
+                light.position.set(20, 20, 20);
+                scene.add(light);
+
+                renderer = new THREE.WebGLRenderer({antialias:true});
+                renderer.setSize(window.innerWidth,window.innerHeight);
+                document.body.appendChild(renderer.domElement);
+
+                let loader= new THREE.GLTFLoader();
+                loader.load('./3D/Window.gltf', function(gltf){
+                    object = gltf.scene.children[0]
+                    object.scale.set(.5,.5,.5,.5)
+                    scene.add(gltf.scene);
+                    renderer.render(scene,camera);
+                    animate();
+                });
+
+            function animate(){
+                requestAnimationFrame(animate);
+                object.rotation.y += 0.02;
+                renderer.render(scene,camera);
+
+            }
+                
+        }
+
+            init();
+
+            window.addEventListener("wheel", function(e) {
+            console.log("scrolled")
+            // code to increment object.position.z 
+            }, true);
+        </script>
+       
+        <!-- <div class="scene"></div> -->
+        <!-- <script src="./script.js"></script> -->
+    </body>
+</html>

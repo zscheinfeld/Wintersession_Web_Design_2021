@@ -20,7 +20,6 @@ $(document).ready(function(){
     // var scroll =this.scrollY;
     // var scrollable=document.documentElement.scrollHeight - window.innerHeight
     window.scrollTo(0, studiosectionwidth)
-    
   
 });
 
@@ -163,7 +162,7 @@ window.onresize = function(event) {
 
 // 3D
 
-let scene, camera, renderer;
+let scene, camera, renderer, controls;
 
             function init() {
                 scene = new THREE.Scene();
@@ -173,6 +172,9 @@ let scene, camera, renderer;
                 camera.position.x= - .28*window.innerHeight
                 camera.position.y=0;
                 camera.position.z=2000;
+
+            
+
 
                 window.addEventListener("scroll", function(e) {
                     // camera.position.z= (this.scrollY-1);
@@ -185,8 +187,6 @@ let scene, camera, renderer;
                 const light = new THREE.DirectionalLight(0xffffff,3);
                 light.position.set(20, 20, 20);
                 scene.add(light);
-
-
 
                 renderer = new THREE.WebGLRenderer({antialias:true});
                 renderer.setSize(window.innerWidth,window.innerHeight);
@@ -204,9 +204,12 @@ let scene, camera, renderer;
                 });
 
             function animate(){
+                renderer.render(scene,camera);
                 requestAnimationFrame(animate);
                 object.rotation.y += 0.02;
-                renderer.render(scene,camera);
+
+                
+                
 
             }
                 

@@ -57,7 +57,7 @@ canvas{
 #landingtext{
     font-size: 1.3em;
     justify-content: center;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: white;
     text-align: center;
     transform: rotate(-90deg);
@@ -71,7 +71,7 @@ canvas{
 #landingtextright{
     font-size: 1.3em;
     justify-content: center;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
     color: white;
     text-align: center;
     transform: rotate(90deg);
@@ -127,6 +127,14 @@ canvas{
     height:100%;    
     margin: 0px;
     
+}
+
+.caption{
+    float: left;
+    font-family: 'Roboto', sans-serif;
+    color:rgb(157, 164, 170);
+    font-size: .9em;
+    line-height: 3;
 }
 
 .flexbox-item-transparent{
@@ -199,7 +207,6 @@ canvas{
 .studio-landscape-column{
     height: calc(88vh + 10px);
     min-width: 146vh;
-    background-color: lightcoral;
     margin-left:7px;
     margin-right:7px;
     margin-top: 0px;
@@ -216,7 +223,6 @@ canvas{
 .studio-landscape-caption-container{
     min-width: 146vh;
     height: 8vh;
-    background-color:rgb(219, 150, 20);
     margin-left:7px;
     margin-right:7px;
 }
@@ -232,7 +238,6 @@ canvas{
 .studio-wide-portrait-column{
     height: calc(88vh + 10px);
     min-width: 74vh;
-    background-color: lightcoral;
     margin-left:7px;
     margin-right:7px;
     margin-top: 0px;
@@ -240,6 +245,8 @@ canvas{
     flex-direction: column;
     justify-content: space-between;
 }
+
+
 
 .studio-wide-portrait-column img{
     max-height: 100%;
@@ -249,7 +256,6 @@ canvas{
 .studio-wide-portrait-caption-container{
     min-width: 74vh;
     height: 8vh;
-    background-color:rgb(219, 150, 20);
     margin-left:7px;
     margin-right:7px;
 }
@@ -265,7 +271,6 @@ canvas{
 .studio-skinny-portrait-column{
     height: calc(88vh + 10px);
     min-width: 59vh;
-    background-color: lightcoral;
     margin-left:7px;
     margin-right:7px;
     margin-top: 0px;
@@ -277,7 +282,6 @@ canvas{
 .studio-skinny-portrait-caption-container{
     min-width: 59vh;
     height: 8vh;
-    background-color:rgb(219, 150, 20);
     margin-left:7px;
     margin-right:7px;
 }
@@ -291,14 +295,12 @@ canvas{
     min-width: 55vh;
     display: flex;
     flex-direction: column;
-    background-color: cadetblue;
     justify-content: flex-start;
 }
 
 .studio-spread-column{
     height: calc(88vh + 10px);
     min-width: 55vh;
-    background-color: lightcoral;
     margin-left:7px;
     margin-right:7px;
     margin-top: 0px;
@@ -310,21 +312,30 @@ canvas{
 .studio-spread-caption-container{
     min-width: 55vh;
     height: 8vh;
-    background-color:rgb(219, 150, 20);
     margin-left:7px;
     margin-right:7px;
 }
 
 .studio-spread-square{
-    min-width: calc(55vh);
-    min-height: 44vh;
-    background-color: greenyellow;
+    width: calc(55vh);
+    height: 44vh;
+    object-fit: cover;
+    overflow: hidden;
+    justify-content: center;
+    
 }
+
+.studio-spread-square img{
+    max-height: 100%;
+    max-width: 100%;
+    
+    
+}
+
 
 .studio-caption-container{
     min-width: 44vh;
     height: 8vh;
-    background-color:rgb(219, 150, 20);
     margin-left:7px;
     margin-right:7px;
 }
@@ -349,7 +360,6 @@ canvas{
 .studio-double-column-caption-container{
     min-width: 88vh;
     height: 8vh;
-    background-color:rgb(219, 150, 20);
     margin-left:7px;
     margin-right:7px;
 }
@@ -452,6 +462,7 @@ canvas{
     overflow: hidden;
     max-width: 100%;
 }
+
 
 .client-hero-images{
     display: flex;
