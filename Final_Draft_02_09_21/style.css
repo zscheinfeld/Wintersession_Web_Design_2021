@@ -379,7 +379,6 @@ canvas{
 .studio-double-square{
     max-width: calc(88vh);
     max-height: calc(44vh);
-    background-color: greenyellow;
     object-fit: cover;
 }
 
