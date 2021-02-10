@@ -36,22 +36,22 @@ $("document").ready(function() {
 
     const carouselSlideGroji = document.querySelector("#groji");
     const carouselImagesGroji = document.querySelectorAll("#groji img");
-    var counter = 1;
+    var grojicounter = 1;
     // var size = carouselImagesGroji[0].clientWidth;
 
-    carouselSlideGroji.style.transform = 'translateX(' +(-size * counter) + 'px)';
+    carouselSlideGroji.style.transform = 'translateX(' +(-size * grojicounter) + 'px)';
     $("#groji").on('click', function(){
-        if (counter >= carouselImagesGroji.length-1) return;
+        if (grojicounter >= carouselImagesGroji.length-1) return;
         carouselSlideGroji.style.transition = "transform 1s ease-in-out";
-        counter++;
-        carouselSlideGroji.style.transform= 'translateX(' +(-size * counter) + 'px)';
+        grojicounter++;
+        carouselSlideGroji.style.transform= 'translateX(' +(-size * grojicounter) + 'px)';
     });
 
     carouselSlideGroji.addEventListener('transitionend', ()=>{
-        if (carouselImagesGroji[counter].id === 'firstClone') {
+        if (carouselImagesGroji[grojicounter].id === 'firstClonegroji') {
                 carouselSlideGroji.style.transition = "none";
-                counter = carouselImagesGroji.length - counter;
-                carouselSlideGroji.style.transform = 'translateX(' +(-size * counter) + 'px)';
+                grojicounter = carouselImagesGroji.length - grojicounter;
+                carouselSlideGroji.style.transform = 'translateX(' +(-size * grojicounter) + 'px)';
             }
     
     });
@@ -85,7 +85,7 @@ $("document").ready(function() {
         size = carouselImages[countercritical].clientWidth;
         // size = carouselImagesGroji[counter].clientWidth;
         carouselSlideGroji.style.transition = "none";
-        carouselSlideGroji.style.transform= 'translateX(' +(-size * counter) + 'px)';
+        carouselSlideGroji.style.transform= 'translateX(' +(-size * grojicounter) + 'px)';
         // size = carouselImages[countercritical].clientWidth;
         carouselSlide.style.transition = "none";
         carouselSlide.style.transform= 'translateX(' +(-size * countercritical) + 'px)';

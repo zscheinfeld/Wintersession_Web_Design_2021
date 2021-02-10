@@ -338,7 +338,7 @@ canvas{
 
 .studio-double-column{
     height: calc(88vh + 10px);
-    width: 88vh;
+    max-width: 88vh;
     margin-left:7px;
     margin-right:7px;
     margin-top: 0px;
