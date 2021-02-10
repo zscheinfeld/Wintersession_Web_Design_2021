@@ -80,7 +80,7 @@ $("document").ready(function() {
     });
 
     // resize
-    
+
     window.onresize = function(event) {
         size = carouselImages[countercritical].clientWidth;
         // size = carouselImagesGroji[counter].clientWidth;
@@ -96,11 +96,6 @@ $("document").ready(function() {
     };
 
 });
-
-
-
-
-
 
 
 // scroll 
@@ -140,7 +135,6 @@ window.addEventListener("scroll", function(event){
 });
 
 // 3D
-
 
 
 let scene, camera, renderer;
