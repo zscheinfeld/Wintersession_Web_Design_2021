@@ -23,7 +23,7 @@ $("document").ready(function() {
     });
 
     carouselSlide.addEventListener('transitionend', ()=>{
-        if (carouselImages[countercritical].id === 'firstClone') {
+        if (carouselImages[countercritical].id === 'firstClonecritical') {
                 carouselSlide.style.transition = "none";
                 countercritical = carouselImages.length - countercritical;
                 carouselSlide.style.transform = 'translateX(' +(-size * countercritical) + 'px)';}
@@ -70,7 +70,7 @@ $("document").ready(function() {
     });
 
     carouselSlideOG.addEventListener('transitionend', ()=>{
-        if (carouselImagesOG[OGcounter].id === 'firstClone') {
+        if (carouselImagesOG[OGcounter].id === 'firstCloneog') {
             carouselSlideOG.style.transition = "none";
             OGcounter = carouselImagesOG.length - OGcounter;
             carouselSlideOG.style.transform = 'translateX(' +(-size * OGcounter) + 'px)';}
