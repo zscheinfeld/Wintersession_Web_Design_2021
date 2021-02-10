@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: skyblue;
+}
+
+p{
+    text-align: center;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.5em;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(65, 64, 121)
+}
+
+h3 {
+    text-align: center;
+    margin: 0 auto;
+    font-family: Arial, Helvetica, sans-serif;
+    color:rgb(65, 64, 121)
+}
+
+a {
+    font-family: 'Courier New', Courier, monospace;
+    color:darkslategray;
+    text-align: center;
+    display: block;
+}
+
+
+
