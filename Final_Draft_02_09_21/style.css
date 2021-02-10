@@ -353,7 +353,8 @@ canvas{
 }
 
 .studio-double-column img{
-    height: 100%;
+    max-height: 100%;
+    max-width: 100%;
 
 }
 
@@ -388,7 +389,7 @@ canvas{
 
 .studio-double-square img{
     max-height: 100%;
-    max-width: 100%
+    max-width: 100%;
     
 }
 
