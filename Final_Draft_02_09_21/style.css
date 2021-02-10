@@ -246,8 +246,6 @@ canvas{
     justify-content: space-between;
 }
 
-
-
 .studio-wide-portrait-column img{
     max-height: 100%;
     max-width: 100%;
@@ -329,9 +327,7 @@ canvas{
     max-height: 100%;
     max-width: 100%;
     
-    
 }
-
 
 .studio-caption-container{
     min-width: 44vh;
@@ -476,6 +472,7 @@ canvas{
 .client-hero-images img{
     z-index: 1;
     object-fit: cover;
+    
 }
 
  @keyframes slidenext{

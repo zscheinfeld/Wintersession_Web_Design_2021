@@ -14,7 +14,8 @@ $("document").ready(function() {
     var countercritical = 1;
     var size = carouselImages[0].clientWidth;
     carouselSlide.style.transform = 'translateX(' +(-size * countercritical) + 'px)';
-    $(".critical").on('click', function(){
+    $("#critical").on('click', function(){
+        console.log("click")
         if (countercritical >= carouselImages.length-1) return;
         console.log('clicked')
         carouselSlide.style.transition = "transform 1s ease-in-out";
@@ -86,10 +87,8 @@ window.onresize = function(event) {
     size = carouselImagesGroji[counter].clientWidth;
     carouselSlideGroji.style.transition = "none";
     carouselSlideGroji.style.transform= 'translateX(' +(-size * counter) + 'px)';
-    size = carouselImages[countercritical].clientWidth;
     carouselSlide.style.transition = "none";
     carouselSlide.style.transform= 'translateX(' +(-size * countercritical) + 'px)';
-    size = carouselImagesOG[OGcounter].clientWidth;
     carouselSlideOG.style.transition = "none";
     carouselSlideOG.style.transform= 'translateX(' +(-size * countercritical) + 'px)';
 
