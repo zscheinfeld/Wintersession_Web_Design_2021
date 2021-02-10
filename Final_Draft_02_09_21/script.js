@@ -14,7 +14,7 @@ $("document").ready(function() {
     var countercritical = 1;
     var size = carouselImages[0].clientWidth;
     carouselSlide.style.transform = 'translateX(' +(-size * countercritical) + 'px)';
-    $("#critical").on('click', function(){
+    $(".critical").on('click', function(){
         if (countercritical >= carouselImages.length-1) return;
         console.log('clicked')
         carouselSlide.style.transition = "transform 1s ease-in-out";
@@ -46,7 +46,7 @@ $("document").ready(function() {
     });
 
     carouselSlideGroji.addEventListener('transitionend', ()=>{
-        if (carouselImagesGroji[counter].id === 'firstClone') {
+        if (carouselImagesGroji[counter].id === 'firstClonegroji') {
                 carouselSlideGroji.style.transition = "none";
                 counter = carouselImagesGroji.length - counter;
                 carouselSlideGroji.style.transform = 'translateX(' +(-size * counter) + 'px)';
