@@ -59,25 +59,45 @@ $("document").ready(function() {
     // OG slideshow
 
     const carouselSlideOG = document.querySelector("#OG");
-    const carouselImagesOG = document.querySelectorAll("#OG img");
+    // const carouselImagesOG = document.querySelectorAll("#OG img  video");
+    const carouselImagesOG = document.getElementsByClassName("OG-Slides");
     var OGcounter = 1;
+
+    const OGvideos = document.getElementsByClassName("isOGvideo");
 
     carouselSlideOG.style.transform = 'translateX(' +(-size * OGcounter) + 'px)';
 
     $("#OG").on('click', function(){
+      
         if (OGcounter >= carouselImagesOG.length-1) return;
             carouselSlideOG.style.transition = "transform 1s ease-in-out";
             OGcounter++;
             carouselSlideOG.style.transform= 'translateX(' +(-size * OGcounter) + 'px)';
+
+    //    if (OGcounter = 1)
+    //         console.log(OGvideos)
+        
+
+        // if (OGcounter !== 1); 
+        //     // OGvideos.pause()
+        //     // OGvideos.currentTime=0;
+        //     // OGvideos.load();
+        //     console.log("pause")
+         
     });
 
-    carouselSlideOG.addEventListener('transitionend', ()=>{
+
+        carouselSlideOG.addEventListener('transitionend', ()=>{
         if (carouselImagesOG[OGcounter].id === 'firstCloneog') {
             carouselSlideOG.style.transition = "none";
             OGcounter = carouselImagesOG.length - OGcounter;
             carouselSlideOG.style.transform = 'translateX(' +(-size * OGcounter) + 'px)';}
 
     });
+
+
+
+    
 
     //  // covid slideshow
 
