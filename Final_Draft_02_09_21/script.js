@@ -7,6 +7,34 @@ $("document").ready(function() {
     var studiosectionwidth = $(".flexbox-item-studio").width() + 921 + 7;
     window.scrollTo(0, studiosectionwidth)
 
+    var criticalbuttoncounter = 1
+    $("#button").on('click', function(){
+        
+        
+        if (criticalbuttoncounter % 2==0) {
+        $(".project-information").toggle("slow", "swing");
+        $("#criticalbutton").addClass("buttonplus")
+        $("#criticalbutton").removeClass("buttonminus")
+        console.log('minus')
+        criticalbuttoncounter = criticalbuttoncounter + 1
+        console.log(criticalbuttoncounter)
+        
+        }
+
+        else {
+        $(".project-information").toggle("slow", "swing");
+        $("#criticalbutton").addClass("buttonminus")
+        $("#criticalbutton").removeClass("buttonplus")
+        console.log('plus')
+        criticalbuttoncounter = criticalbuttoncounter + 1
+        console.log(criticalbuttoncounter)
+        
+        }
+        
+        });
+
+    
+
     // slideshows
 
     // critical 39 slideshow
@@ -93,7 +121,15 @@ $("document").ready(function() {
             OGcounter = carouselImagesOG.length - OGcounter;
             carouselSlideOG.style.transform = 'translateX(' +(-size * OGcounter) + 'px)';}
 
+    
+
     });
+
+    // Information Button 
+
+    
+
+
 
 
 
@@ -212,20 +248,21 @@ function init() {
         
 
                 let loader= new THREE.GLTFLoader();
-                loader.load('./3D/Window.gltf', function(gltf){
-                    object = gltf.scene.children[0]
-                    let fileAnimations = gltf.animations;
-                    console.log(fileAnimations)
-                    console.log(fileAnimations[0])
-                    console.log(gltf)
-                    object.scale.set(.5,.5,.5,.5)
-                    scene.add(gltf.scene);
-                    renderer.render(scene,camera);
-                    animate();
+                    loader.load('./3D/Window.gltf', function(gltf){
+                        object = gltf.scene.children[0]
+                        let fileAnimations = gltf.animations;
+                        console.log(fileAnimations)
+                        console.log(fileAnimations[0])
+                        console.log(gltf)
+                        object.scale.set(.5,.5,.5,.5)
+                        scene.add(gltf.scene);
+                        renderer.render(scene,camera);
+                        animate();
+                    
 
-                    // mixer = new THREE.AnimationMixer(object);
-                    // var open = mixer.clipAction(fileAnimations[0]);
-                    // open.play();
+                        // mixer = new THREE.AnimationMixer(object);
+                        // var open = mixer.clipAction(fileAnimations[0]);
+                        // open.play();
 
                     
                     
