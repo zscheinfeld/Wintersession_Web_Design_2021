@@ -445,7 +445,6 @@ canvas{
 
 .project-information{
     background-color: black;
-    opacity: 85%;
     z-index: 15;
     position: fixed;
     height:45vh;
@@ -456,6 +455,50 @@ canvas{
     justify-content: space-around;
     align-items: center;
 }
+
+.opacity-on{
+    animation-name: opacityon;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes opacityon {
+    from {
+    opacity: 0%;
+    
+    }
+
+    to {
+    opacity: 85%;
+    
+        }
+}
+
+.opacity-off{
+    animation-name: opacityoff;
+    animation-duration: .5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes opacityoff {
+    from {
+    opacity: 85%;
+    
+    }
+
+    to {
+    opacity: 0%;
+    
+        }
+}
+
+.opacity-off-start{
+    opacity: 0;
+}
+
+
 
 .project-information-type{
     height: 85%;

@@ -12,9 +12,11 @@ $("document").ready(function() {
         
         
         if (criticalbuttoncounter % 2==0) {
-        $(".project-information").toggle("slow", "swing");
-        $("#criticalbutton").addClass("buttonplus")
-        $("#criticalbutton").removeClass("buttonminus")
+        $(".project-information").removeClass("opacity-off-start");
+        $(".project-information").removeClass("opacity-on");
+        $(".project-information").addClass("opacity-off");
+        $("#criticalbutton").addClass("buttonminus")
+        $("#criticalbutton").removeClass("buttonplus")
         console.log('minus')
         criticalbuttoncounter = criticalbuttoncounter + 1
         console.log(criticalbuttoncounter)
@@ -22,9 +24,10 @@ $("document").ready(function() {
         }
 
         else {
-        $(".project-information").toggle("slow", "swing");
-        $("#criticalbutton").addClass("buttonminus")
-        $("#criticalbutton").removeClass("buttonplus")
+        $(".project-information").addClass("opacity-on");
+        $(".project-information").removeClass("opacity-off");
+        $("#criticalbutton").addClass("buttonplus")
+        $("#criticalbutton").removeClass("buttonminus")
         console.log('plus')
         criticalbuttoncounter = criticalbuttoncounter + 1
         console.log(criticalbuttoncounter)
