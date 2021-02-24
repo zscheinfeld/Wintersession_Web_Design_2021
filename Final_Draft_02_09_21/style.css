@@ -451,7 +451,7 @@ canvas{
     min-width: -webkit-calc(75vh - 14px);
     max-width: -webkit-calc(75vh - 14px);
     min-width:calc(75vh - 14px);
-    max-width:calc(75vh -14px);
+    max-width:calc(75vh - 14px);
     
     display: flex;
     justify-content: space-around;
