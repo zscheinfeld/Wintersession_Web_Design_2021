@@ -448,6 +448,8 @@ canvas{
     z-index: 15;
     position: fixed;
     height:45vh;
+    min-width: -webkit-calc(75vh - 14px);
+    max-width: -webkit-calc(75vh - 14px);
     min-width:calc(75vh - 14px);
     max-width:calc(75vh -14px);
     
