@@ -7,33 +7,80 @@ $("document").ready(function() {
     var studiosectionwidth = $(".flexbox-item-studio").width() + 921 + 7;
     window.scrollTo(0, studiosectionwidth)
 
+    // critical button
+
     var criticalbuttoncounter = 1
-    $("#button").on('click', function(){
-        
-        
+    $("#buttoncritical").on('click', function(){
+        console.log("critical")
         if (criticalbuttoncounter % 2==0) {
-        $(".project-information").removeClass("opacity-off-start");
-        $(".project-information").removeClass("opacity-on");
-        $(".project-information").addClass("opacity-off");
+        $(".project-information-critical").removeClass("opacity-off-start");
+        $(".project-information-critical").removeClass("opacity-on");
+        $(".project-information-critical").addClass("opacity-off");
         $("#criticalbutton").addClass("buttonminus")
         $("#criticalbutton").removeClass("buttonplus")
         console.log('minus')
         criticalbuttoncounter = criticalbuttoncounter + 1
         console.log(criticalbuttoncounter)
-        
+        function moveback(){
+            $(".project-information-critical").removeClass("move-up")
+            $(".project-information-critical").addClass("move-back")
         }
-
+        setTimeout(moveback,500);
+        }
         else {
-        $(".project-information").addClass("opacity-on");
-        $(".project-information").removeClass("opacity-off");
+        $(".project-information-critical").addClass("opacity-on");
+        $(".project-information-critical").removeClass("opacity-off");
         $("#criticalbutton").addClass("buttonplus")
         $("#criticalbutton").removeClass("buttonminus")
         console.log('plus')
         criticalbuttoncounter = criticalbuttoncounter + 1
         console.log(criticalbuttoncounter)
         
+        function moveup(){
+            $(".project-information-critical").removeClass("move-back")
+            $(".project-information-critical").addClass("move-up")
         }
+        moveup(); 
+        } 
+        });
+
+        // groji button // 
+
+         // critical button
+
+    var grojibuttoncounter = 1
+    $("#buttongroji").on('click', function(){
+        console.log("groji")
+        if (grojibuttoncounter % 2==0) {
+        $(".project-information-groji").removeClass("opacity-off-start");
+        $(".project-information-groji").removeClass("opacity-on");
+        $(".project-information-groji").addClass("opacity-off");
+        $("#grojibutton").addClass("buttonminus")
+        $("#grojibutton").removeClass("buttonplus")
+        console.log('minus')
+        grojibuttoncounter = grojibuttoncounter + 1
+        console.log(criticalbuttoncounter)
+        function moveback(){
+            $(".project-information-groji").removeClass("move-up")
+            $(".project-information-groji").addClass("move-back")
+        }
+        setTimeout(moveback,500);
+        }
+        else {
+        $(".project-information-groji").addClass("opacity-on");
+        $(".project-information-groji").removeClass("opacity-off");
+        $("#grojibutton").addClass("buttonplus")
+        $("#grojibutton").removeClass("buttonminus")
+        console.log('plus')
+        grojibuttoncounter = grojibuttoncounter + 1
+        console.log(grojibuttoncounter)
         
+        function moveup(){
+            $(".project-information-groji").removeClass("move-back")
+            $(".project-information-groji").addClass("move-up")
+        }
+        moveup(); 
+        } 
         });
 
     
