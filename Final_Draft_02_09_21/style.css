@@ -648,15 +648,23 @@ canvas{
 
 .client-hero-images{
     display: flex;
+    display:-webkit-flex;
     height: 100%;
     width: 100%;
+    object-fit: cover;
 
 }
 
 .client-hero-images img{
     z-index: 1;
-    object-fit: cover;
-    
+    height: 100%;
+    width: 100%;  
+}
+
+.client-hero-images video{
+    z-index: 1;
+    height: 100%;
+    width: 100%;  
 }
 
  @keyframes slidenext{

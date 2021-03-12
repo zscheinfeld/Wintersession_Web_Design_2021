@@ -1,11 +1,12 @@
-const landing = document.getElementById('landing')
 
-
+window.scrollTo(0, 5000);
 
 $("document").ready(function() {
-
+    const landing = document.getElementById('landing')
     var studiosectionwidth = $(".flexbox-item-studio").width() + 921 + 7;
-    window.scrollTo(0, studiosectionwidth)
+    window.scrollTo(0, studiosectionwidth);
+    console.log(studiosectionwidth + "scroll width");
+});
 
     // critical button
 
@@ -224,7 +225,7 @@ $("document").ready(function() {
     
     };
 
-});
+
 
 
 // scroll 
