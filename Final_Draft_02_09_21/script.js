@@ -7,7 +7,9 @@ $("document").ready(function() {
     var studiosectionwidth = $(".flexbox-item-studio").width() + 921 + 7;
     window.scrollTo(0, studiosectionwidth);
     console.log(studiosectionwidth + "scroll width");
+
 });
+
 
     // critical button
 
@@ -48,7 +50,6 @@ $("document").ready(function() {
 
         // groji button // 
 
-         // critical button
 
     var grojibuttoncounter = 1
     $("#buttongroji").on('click', function(){
@@ -91,11 +92,18 @@ $("document").ready(function() {
 
     // critical 39 slideshow
 
+    
+
     const carouselSlide = document.querySelector("#critical");
     const carouselImages = document.querySelectorAll("#critical img");
     var countercritical = 1;
     var size = carouselImages[0].clientWidth;
-    carouselSlide.style.transform = 'translateX(' +(-size * countercritical) + 'px)';
+    
+    function criticalslide (){
+        carouselSlide.style.transform = 'translateX(' +(-size * countercritical) + 'px)';
+        console.log("criticalslide")
+    }
+    criticalslide();
     $("#critical").on('click', function(){
         if (countercritical >= carouselImages.length-1) return;
         console.log('clicked')
@@ -119,7 +127,12 @@ $("document").ready(function() {
     var grojicounter = 1;
     // var size = carouselImagesGroji[0].clientWidth;
 
-    carouselSlideGroji.style.transform = 'translateX(' +(-size * grojicounter) + 'px)';
+    function grojislide (){
+        carouselSlideGroji.style.transform = 'translateX(' +(-size * grojicounter) + 'px)';
+        console.log("grojislide")
+    }
+    grojislide();
+
     $("#groji").on('click', function(){
         if (grojicounter >= carouselImagesGroji.length-1) return;
         carouselSlideGroji.style.transition = "transform 1s ease-in-out";
@@ -225,6 +238,8 @@ $("document").ready(function() {
         carouselSlideOG.style.transform= 'translateX(' +(-size * countercritical) + 'px)';
     
     };
+
+
 
 
 
