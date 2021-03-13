@@ -1,5 +1,3 @@
-
-
 window.scrollTo(0, 5000);
 
 $("document").ready(function() {
@@ -158,7 +156,13 @@ $("document").ready(function() {
 
     const OGvideos = document.getElementsByClassName("isOGvideo");
 
-    carouselSlideOG.style.transform = 'translateX(' +(-size * OGcounter) + 'px)';
+    
+
+    function OGslide (){
+        carouselSlideOG.style.transform = 'translateX(' +(-size * OGcounter) + 'px)';
+        console.log("OGslide")
+    }
+    OGslide();
 
     $("#OG").on('click', function(){
       
