@@ -61,22 +61,6 @@ window.addEventListener("scroll", function(event){
     }
 });
 
-$("#critical").on('click', function(event){
-    if (countercritical >= carouselImages.length-1) return;
-    console.log('clicked')
-    carouselSlide.style.transition = "transform 1s ease-in-out";
-    countercritical++;
-    carouselSlide.style.transform= 'translateX(' +(-size * countercritical) + 'px)';
-});
-
-carouselSlide.addEventListener('transitionend', ()=>{
-    if (carouselImages[countercritical].id === 'firstClonecritical') {
-            carouselSlide.style.transition = "none";
-            countercritical = carouselImages.length - countercritical;
-            carouselSlide.style.transform = 'translateX(' +(-size * countercritical) + 'px)';}
-
-});
-
 $("#groji").on('click', function(event){
     if (grojicounter >= carouselImagesGroji.length-1) return;
     console.log('clicked')
@@ -143,6 +127,22 @@ window.onresize = function(event) {
         }
         moveup(); 
         } 
+        });
+
+        $("#critical").on('click', function(event){
+            if (countercritical >= carouselImages.length-1) return;
+            console.log('clicked')
+            carouselSlide.style.transition = "transform 1s ease-in-out";
+            countercritical++;
+            carouselSlide.style.transform= 'translateX(' +(-size * countercritical) + 'px)';
+        });
+        
+        carouselSlide.addEventListener('transitionend', ()=>{
+            if (carouselImages[countercritical].id === 'firstClonecritical') {
+                    carouselSlide.style.transition = "none";
+                    countercritical = carouselImages.length - countercritical;
+                    carouselSlide.style.transform = 'translateX(' +(-size * countercritical) + 'px)';}
+        
         });
 
         // groji button // 
@@ -217,13 +217,12 @@ window.onresize = function(event) {
     // }
     // OGslide();
 
-    $("#OG").on('click', function(event){
+    $("#OG").on('click', function(){
       
         if (OGcounter >= carouselImagesOG.length-1) return;
             carouselSlideOG.style.transition = "transform 1s ease-in-out";
             OGcounter++;
             carouselSlideOG.style.transform= 'translateX(' +(-size * OGcounter) + 'px)';
-         
     });
 
 
