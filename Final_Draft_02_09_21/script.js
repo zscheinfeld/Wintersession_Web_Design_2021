@@ -24,6 +24,7 @@ $("document").ready(function() {
     carouselSlide.style.transform= 'translateX(' +(-size * countercritical) + 'px)';
     carouselSlideOG.style.transition = "none";
     carouselSlideOG.style.transform= 'translateX(' +(-size * countercritical) + 'px)';
+    console.log(size + "size")
     
 });
 
@@ -144,7 +145,6 @@ window.onresize = function(event) {
                     carouselSlide.style.transition = "none";
                     countercritical = carouselImages.length - countercritical;
                     carouselSlide.style.transform = 'translateX(' +(-size * countercritical) + 'px)';}
-        
         });
 
         // groji button // 
