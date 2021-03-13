@@ -61,7 +61,7 @@ window.addEventListener("scroll", function(event){
     }
 });
 
-$("#critical").on('click', function(){
+$("#critical").on('click', function(event){
     if (countercritical >= carouselImages.length-1) return;
     console.log('clicked')
     carouselSlide.style.transition = "transform 1s ease-in-out";
@@ -77,7 +77,7 @@ carouselSlide.addEventListener('transitionend', ()=>{
 
 });
 
-$("#groji").on('click', function(){
+$("#groji").on('click', function(event){
     if (grojicounter >= carouselImagesGroji.length-1) return;
     console.log('clicked')
     carouselSlideGroji.style.transition = "transform 1s ease-in-out";
@@ -217,7 +217,7 @@ window.onresize = function(event) {
     // }
     // OGslide();
 
-    $("#OG").on('click', function(){
+    $("#OG").on('click', function(event){
       
         if (OGcounter >= carouselImagesOG.length-1) return;
             carouselSlideOG.style.transition = "transform 1s ease-in-out";
