@@ -1,12 +1,78 @@
 window.scrollTo(0, 5000);
 
+const carouselSlide = document.querySelector("#critical");
+const carouselImages = document.querySelectorAll("#critical img");
+var countercritical = 1;
+var size = carouselImages[0].clientWidth;
+const carouselSlideGroji = document.querySelector("#groji");
+const carouselImagesGroji = document.querySelectorAll("#groji img");
+var grojicounter = 1;
+const carouselSlideOG = document.querySelector("#OG");
+const carouselImagesOG = document.getElementsByClassName("OG-Slides");
+var OGcounter = 1;
+const OGvideos = document.getElementsByClassName("isOGvideo");
+
+
 $("document").ready(function() {
     const landing = document.getElementById('landing')
     var studiosectionwidth = $(".flexbox-item-studio").width() + 921 + 7;
     window.scrollTo(0, studiosectionwidth);
     console.log(studiosectionwidth + "scroll width");
+    carouselSlide.style.transform = 'translateX(' +(-size * countercritical) + 'px)';
+    carouselSlideGroji.style.transform = 'translateX(' +(-size * grojicounter) + 'px)';
+    carouselSlideOG.style.transform = 'translateX(' +(-size * OGcounter) + 'px)';
 
 });
+
+// scroll 
+
+window.addEventListener("scroll", function(event){
+    var studiosectionwidth = $(".flexbox-item-studio").width() + 921 + 7;
+    var clientsectionwidth = $(".flexbox-item-client-container").width() + 921;
+    $(".flexbox-item-transparent-client").height(clientsectionwidth);
+    $(".flexbox-item-transparent").height(studiosectionwidth);
+    var scroll =this.scrollY;
+    console.log(scroll)
+    console.log(studiosectionwidth + "sectionstudiowidth")
+    var scrollable = document.documentElement.scrollHeight - window.innerHeight
+
+
+    if(scroll < (studiosectionwidth)){
+        scrollable = scrollable + window.innerHeight
+        console.log('when client container is hidden' + 'scrollable is' + scrollable)
+        var left = $(".flexbox-item-studio").css("left")
+        console.log(left + "left")
+        console.log(scroll)
+        $(".flexbox-item-client-container").hide();
+        $(".flexbox-item-studio").show();
+        $(".flexbox-item-studio").css("left" , (- (1*window.scrollY)) + "px");
+    
+    }
+    else {
+        console.log('when client container is shown' + 'scrollable is' + scrollable)
+        $(".flexbox-item-client-container").show();
+        $(".flexbox-item-studio").css("visibilty" , "hidden");
+        $(".flexbox-item-studio").css("left" , (studiosectionwidth));
+        $(".flexbox-item-client-container").css("left" , (- (1*(window.scrollY-(studiosectionwidth + (window.innerHeight/2)))) + "px"));
+        
+    }
+});
+
+ //resize
+
+window.onresize = function(event) {
+    size = carouselImages[countercritical].clientWidth;
+    // size = carouselImagesGroji[counter].clientWidth;
+    carouselSlideGroji.style.transition = "none";
+    carouselSlideGroji.style.transform= 'translateX(' +(-size * grojicounter) + 'px)';
+    // size = carouselImages[countercritical].clientWidth;
+    carouselSlide.style.transition = "none";
+    carouselSlide.style.transform= 'translateX(' +(-size * countercritical) + 'px)';
+    // size = carouselImagesOG[OGcounter].clientWidth;
+    carouselSlideOG.style.transition = "none";
+    carouselSlideOG.style.transform= 'translateX(' +(-size * countercritical) + 'px)';
+
+};
 
 
     // critical button
@@ -87,21 +153,7 @@ $("document").ready(function() {
     
 
     // slideshows
-
-    // critical 39 slideshow
-
     
-
-    const carouselSlide = document.querySelector("#critical");
-    const carouselImages = document.querySelectorAll("#critical img");
-    var countercritical = 1;
-    var size = carouselImages[0].clientWidth;
-    
-    function criticalslide (){
-        carouselSlide.style.transform = 'translateX(' +(-size * countercritical) + 'px)';
-        console.log("criticalslide")
-    }
-    criticalslide();
     $("#critical").on('click', function(){
         if (countercritical >= carouselImages.length-1) return;
         console.log('clicked')
@@ -118,18 +170,21 @@ $("document").ready(function() {
     
     });
 
+
+
+
     // Groji slideshow
 
-    const carouselSlideGroji = document.querySelector("#groji");
-    const carouselImagesGroji = document.querySelectorAll("#groji img");
-    var grojicounter = 1;
+    // const carouselSlideGroji = document.querySelector("#groji");
+    // const carouselImagesGroji = document.querySelectorAll("#groji img");
+    // var grojicounter = 1;
     // var size = carouselImagesGroji[0].clientWidth;
 
-    function grojislide (){
-        carouselSlideGroji.style.transform = 'translateX(' +(-size * grojicounter) + 'px)';
-        console.log("grojislide")
-    }
-    grojislide();
+    // function grojislide (){
+    //     carouselSlideGroji.style.transform = 'translateX(' +(-size * grojicounter) + 'px)';
+    //     console.log("grojislide")
+    // }
+    // grojislide();
 
     $("#groji").on('click', function(){
         if (grojicounter >= carouselImagesGroji.length-1) return;
@@ -149,20 +204,15 @@ $("document").ready(function() {
 
     // OG slideshow
 
-    const carouselSlideOG = document.querySelector("#OG");
-    // const carouselImagesOG = document.querySelectorAll("#OG img  video");
-    const carouselImagesOG = document.getElementsByClassName("OG-Slides");
-    var OGcounter = 1;
-
-    const OGvideos = document.getElementsByClassName("isOGvideo");
+   
 
     
 
-    function OGslide (){
-        carouselSlideOG.style.transform = 'translateX(' +(-size * OGcounter) + 'px)';
-        console.log("OGslide")
-    }
-    OGslide();
+    // function OGslide (){
+    //     carouselSlideOG.style.transform = 'translateX(' +(-size * OGcounter) + 'px)';
+    //     console.log("OGslide")
+    // }
+    // OGslide();
 
     $("#OG").on('click', function(){
       
@@ -189,8 +239,6 @@ $("document").ready(function() {
             carouselSlideOG.style.transition = "none";
             OGcounter = carouselImagesOG.length - OGcounter;
             carouselSlideOG.style.transform = 'translateX(' +(-size * OGcounter) + 'px)';}
-
-    
 
     });
 
@@ -229,60 +277,7 @@ $("document").ready(function() {
 
     // resize
 
-    window.onresize = function(event) {
-        size = carouselImages[countercritical].clientWidth;
-        // size = carouselImagesGroji[counter].clientWidth;
-        carouselSlideGroji.style.transition = "none";
-        carouselSlideGroji.style.transform= 'translateX(' +(-size * grojicounter) + 'px)';
-        // size = carouselImages[countercritical].clientWidth;
-        carouselSlide.style.transition = "none";
-        carouselSlide.style.transform= 'translateX(' +(-size * countercritical) + 'px)';
-        // size = carouselImagesOG[OGcounter].clientWidth;
-        carouselSlideOG.style.transition = "none";
-        carouselSlideOG.style.transform= 'translateX(' +(-size * countercritical) + 'px)';
-    
-    };
-
-
-
-
-
-
-// scroll 
-
-window.addEventListener("scroll", function(event){
-    var studiosectionwidth = $(".flexbox-item-studio").width() + 921 + 7;
-    var clientsectionwidth = $(".flexbox-item-client-container").width() + 921;
-    $(".flexbox-item-transparent-client").height(clientsectionwidth);
-    $(".flexbox-item-transparent").height(studiosectionwidth);
-    var scroll =this.scrollY;
-    console.log(scroll)
-    console.log(studiosectionwidth + "sectionstudiowidth")
-    var scrollable = document.documentElement.scrollHeight - window.innerHeight
-    // const scrolled = window.scrollY;
-    // 11823
-
-    if(scroll < (studiosectionwidth)){
-        scrollable = scrollable + window.innerHeight
-        console.log('when client container is hidden' + 'scrollable is' + scrollable)
-        var left = $(".flexbox-item-studio").css("left")
-        console.log(left + "left")
-        console.log(scroll)
-        $(".flexbox-item-client-container").hide();
-        $(".flexbox-item-studio").show();
-        $(".flexbox-item-studio").css("left" , (- (1*window.scrollY)) + "px");
-    
-    }
-    else {
-        console.log('when client container is shown' + 'scrollable is' + scrollable)
-        $(".flexbox-item-client-container").show();
-        $(".flexbox-item-studio").css("visibilty" , "hidden");
-        $(".flexbox-item-studio").css("left" , (studiosectionwidth));
-        $(".flexbox-item-client-container").css("left" , (- (1*(window.scrollY-(studiosectionwidth + (window.innerHeight/2)))) + "px"));
-        
-    }
-
-});
+   
 
 // 3D
 
