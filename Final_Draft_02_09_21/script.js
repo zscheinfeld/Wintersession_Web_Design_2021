@@ -1,16 +1,16 @@
 window.scrollTo(0, 5000);
 
-const carouselSlide = document.querySelector("#critical");
-const carouselImages = document.querySelectorAll("#critical img");
+var carouselSlide = document.querySelector("#critical");
+var carouselImages = document.querySelectorAll("#critical img");
 var countercritical = 1;
 var size = carouselImages[0].clientWidth;
-const carouselSlideGroji = document.querySelector("#groji");
-const carouselImagesGroji = document.querySelectorAll("#groji img");
+var carouselSlideGroji = document.querySelector("#groji");
+var carouselImagesGroji = document.querySelectorAll("#groji img");
 var grojicounter = 1;
-const carouselSlideOG = document.querySelector("#OG");
-const carouselImagesOG = document.getElementsByClassName("OG-Slides");
+var carouselSlideOG = document.querySelector("#OG");
+var carouselImagesOG = document.getElementsByClassName("OG-Slides");
 var OGcounter = 1;
-const OGvideos = document.getElementsByClassName("isOGvideo");
+var OGvideos = document.getElementsByClassName("isOGvideo");
 
 
 $("document").ready(function() {
@@ -93,8 +93,7 @@ window.onresize = function(event) {
             $(".project-information-critical").removeClass("move-up")
             $(".project-information-critical").addClass("move-back")
         }
-        setTimeout(moveback,500);
-        }
+        setTimeout(moveback,500);  }
         else {
         $(".project-information-critical").addClass("opacity-on");
         $(".project-information-critical").removeClass("opacity-off");
