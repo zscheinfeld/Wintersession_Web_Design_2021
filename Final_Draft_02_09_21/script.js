@@ -1,19 +1,20 @@
 window.scrollTo(0, 5000);
 
-var carouselSlide = document.querySelector("#critical");
-var carouselImages = document.querySelectorAll("#critical img");
-var countercritical = 1;
-var size = carouselImages[0].clientWidth;
-var carouselSlideGroji = document.querySelector("#groji");
-var carouselImagesGroji = document.querySelectorAll("#groji img");
-var grojicounter = 1;
-var carouselSlideOG = document.querySelector("#OG");
-var carouselImagesOG = document.getElementsByClassName("OG-Slides");
-var OGcounter = 1;
-var OGvideos = document.getElementsByClassName("isOGvideo");
+
 
 
 $("document").ready(function() {
+    var carouselSlide = document.querySelector("#critical");
+    var carouselImages = document.querySelectorAll("#critical img");
+    var countercritical = 1;
+    var size = carouselImages[0].clientWidth;
+    var carouselSlideGroji = document.querySelector("#groji");
+    var carouselImagesGroji = document.querySelectorAll("#groji img");
+    var grojicounter = 1;
+    var carouselSlideOG = document.querySelector("#OG");
+    var carouselImagesOG = document.getElementsByClassName("OG-Slides");
+    var OGcounter = 1;
+    var OGvideos = document.getElementsByClassName("isOGvideo");
     const landing = document.getElementById('landing')
     var studiosectionwidth = $(".flexbox-item-studio").width() + 921 + 7;
     window.scrollTo(0, studiosectionwidth);
@@ -26,7 +27,7 @@ $("document").ready(function() {
     carouselSlideOG.style.transform= 'translateX(' +(-size * countercritical) + 'px)';
     console.log(size + "size")
     
-});
+
 
 // scroll 
 
@@ -237,6 +238,8 @@ window.onresize = function(event) {
     });
 
     // Information Button 
+
+});
 
     
 
